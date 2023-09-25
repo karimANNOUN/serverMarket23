@@ -54,9 +54,7 @@ app.use(cors({
     origin: "".concat(process.env.REACT_APP_HOST),
     credentials: true
 }));
-// host static files
 app.use(express.static("client"));
-// parse post params sent in body in json format
 app.use(express.json());
 app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "".concat(process.env.REACT_APP_HOST));
@@ -67,7 +65,6 @@ app.use(function (req, res, next) {
 });
 data_source_1.AppDataSource.initialize().then(function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        // insert new users for test
         console.log("Express server has started on port 8000. Open http://localhost:8000/users to see results");
         return [2 /*return*/];
     });
