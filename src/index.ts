@@ -44,7 +44,7 @@ app.use(cors({
 
 
 
-// host static files
+
 app.use(express.static("client"));
 
 // parse post params sent in body in json format
@@ -60,7 +60,7 @@ app.use((req:Request, res:Response, next:any) => {
 
 AppDataSource.initialize().then(async () => {
  
-    // insert new users for test
+
 
     console.log("Express server has started on port 8000. Open http://localhost:8000/users to see results")
 
