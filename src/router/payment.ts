@@ -1,9 +1,8 @@
 import * as express from "express"
-//const express = require('express');
 const router = express.Router();
 const paymentServices=require('../controller/PaymentController')
 const verifyToken=require('../verifytoken/verrifyToken')
-
+//hello all
 
 router.post('/payment',verifyToken,paymentServices.payment)
 
